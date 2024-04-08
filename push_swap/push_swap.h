@@ -2,7 +2,7 @@
 # define PUSH_SWAP_H
 
 # include <stdbool.h>
-//# include "../libft+/libft.h"
+# include "libft+/libft.h"
 
 typedef struct s_stack_node
 {
