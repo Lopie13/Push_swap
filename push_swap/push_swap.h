@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include <stdbool.h>
+#include <limits.h>
 # include "libft+/libft.h"
 
 typedef struct s_stack_node
