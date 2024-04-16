@@ -6,13 +6,13 @@
 /*   By: mmata-al <mmata-al@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:18:20 by mmata-al          #+#    #+#             */
-/*   Updated: 2024/04/10 14:42:38 by mmata-al         ###   ########.fr       */
+/*   Updated: 2024/04/16 16:43:47 by mmata-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static long	atol(const char *s)
+static long	ft_atol(const char *s)
 {
 	long	res;
 	int		sign;

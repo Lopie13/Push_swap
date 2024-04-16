@@ -14,8 +14,9 @@
 # define PUSH_SWAP_H
 
 # include <stdbool.h>
-#include <limits.h>
+# include <limits.h>
 # include "libft+/libft.h"
+//# include "libft+/ft_printf.h"
 
 typedef struct s_stack_node
 {
@@ -34,12 +35,12 @@ void			init_nodes_a(t_stack_node *a, t_stack_node *b);
 void			init_nodes_b(t_stack_node *a, t_stack_node *b);
 void			current_index(t_stack_node *stack);
 void			set_cheapest(t_stack_node *stack);
-void			prep_for_push(t_stack_node **s, t_stack_node *n, char c);
+void			push_prep(t_stack_node **s, t_stack_node *n, char c);
 t_stack_node	*get_cheapest(t_stack_node *stack);
 
 //stack initiation
 void			init_stack_a(t_stack_node **a, char **argv);
-char			**split(char *s, char c);
+char			**ftsplit(char *s, char c);
 
 //stack utils
 int				stack_len(t_stack_node *stack);
@@ -49,8 +50,9 @@ t_stack_node	*find_min(t_stack_node *stack);
 t_stack_node	*find_max(t_stack_node *stack);
 
 //sorts
-void			sort_three(t_stack_node **a);
-void			sort_stacks(t_stack_node **a, t_stack_node **b);
+void			sort_3(t_stack_node **a);
+void			sort_stks(t_stack_node **a, t_stack_node **b);
+void		swap(t_stack_node **head);
 
 //commands
 void			sa(t_stack_node **a, bool print);

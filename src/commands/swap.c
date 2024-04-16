@@ -6,13 +6,13 @@
 /*   By: mmata-al <mmata-al@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:17:37 by mmata-al          #+#    #+#             */
-/*   Updated: 2024/04/10 13:54:04 by mmata-al         ###   ########.fr       */
+/*   Updated: 2024/04/16 18:58:16 by mmata-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	swap(t_stack_node **head)
+void	swap(t_stack_node **head)
 {
 	if (!*head || !(*head)->next)
 		return ;

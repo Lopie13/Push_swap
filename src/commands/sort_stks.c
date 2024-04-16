@@ -6,7 +6,7 @@
 /*   By: mmata-al <mmata-al@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:17:32 by mmata-al          #+#    #+#             */
-/*   Updated: 2024/04/10 13:54:01 by mmata-al         ###   ########.fr       */
+/*   Updated: 2024/04/16 19:11:50 by mmata-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,29 +45,29 @@ static void	move_a_to_b(t_stack_node **a, t_stack_node **b)
 	else if (!(cheapest_node->above_median) 
 		&& !(cheapest_node->target_node->above_median))
 		rev_rotate_both(a, b, cheapest_node);
-	prep_for_push(a, cheapest_node, 'a');
-	prep_for_push(b, cheapest_node->target_node, 'b');
+	push_prep(a, cheapest_node, 'a');
+	push_prep(b, cheapest_node->target_node, 'b');
 	pb(b, a, false);
 }
 
 static void	move_b_to_a(t_stack_node **a, t_stack_node **b) 
 {
-	prep_for_push(a, (*b)->target_node, 'a');
+	push_prep(a, (*b)->target_node, 'a');
 	pa(a, b, false); 
 }
 
 static void	min_on_top(t_stack_node **a)
 {
-	while ((*a)->nbr != find_min((*a)->nbr))
+	while ((*a)->nbr != find_min(*a)->nbr)
 	{
-		if (find_min((*a)->above_median))
+		if (find_min(*a)->above_median)
 			ra(a, false);
 		else
 			rra(a, false);
 	}
 }
 
-void	sort_stacks(t_stack_node **a, t_stack_node **b)
+void	sort_stks(t_stack_node **a, t_stack_node **b)
 {
 	int	len_a;
 
@@ -81,7 +81,7 @@ void	sort_stacks(t_stack_node **a, t_stack_node **b)
 		init_nodes_a(*a, *b);
 		move_a_to_b(a, b);
 	}
-	sort_three(a);
+	sort_3(a);
 	while (*b)
 	{
 		init_nodes_b(*a, *b);
