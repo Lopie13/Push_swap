@@ -6,7 +6,7 @@
 /*   By: mmata-al <mmata-al@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 14:48:01 by mmata-al          #+#    #+#             */
-/*   Updated: 2024/04/22 16:16:25 by mmata-al         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:12:57 by mmata-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	error_syntax(char *str_n)
 {
-	if(!(*str_n == '+' || *str_n == '-'))
+	if (!(*str_n == '+' || *str_n == '-'))
 	{
-		if(!(*str_n >= '0' && *str_n <= '9'))
+		if (!(*str_n >= '0' && *str_n <= '9'))
 			return (1);
 	}
-	if((*str_n == '+' || *str_n == '-'))
+	if ((*str_n == '+' || *str_n == '-'))
 	{
-		if(!(str_n[1] >= '0' && str_n[1] <= '9'))
+		if (!(str_n[1] >= '0' && str_n[1] <= '9'))
 			return (1);
 	}
 	while (*++str_n)
