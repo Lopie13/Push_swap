@@ -6,7 +6,7 @@
 /*   By: mmata-al <mmata-al@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:18:20 by mmata-al          #+#    #+#             */
-/*   Updated: 2024/04/16 16:43:47 by mmata-al         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:26:02 by mmata-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static long	ft_atol(const char *s)
 	return (res * sign);
 }
 
-static void append_node (t_stack_node **stack, int n)
+static void	append_node(t_stack_node **stack, int n)
 {
 	t_stack_node	*node;
 	t_stack_node	*last_node;
@@ -58,13 +58,13 @@ static void append_node (t_stack_node **stack, int n)
 	}
 }
 
-void init_stack_a(t_stack_node **a, char **argv)
+void	init_stack_a(t_stack_node **a, char **argv)
 {
 	long	n;
 	int		i;
 
 	i = 0;
-	while(argv[i])
+	while (argv[i])
 	{
 		if (error_syntax(argv[i]))
 			free_errors(a);
@@ -77,6 +77,7 @@ void init_stack_a(t_stack_node **a, char **argv)
 		i++;
 	}
 }
+
 t_stack_node	*get_cheapest(t_stack_node *stack)
 {
 	if (!stack)
@@ -108,7 +109,5 @@ void	push_prep(t_stack_node **stack, t_stack_node *top, char stack_name)
 			else
 				rrb(stack, false);
 		}
-		
 	}
-	
 }

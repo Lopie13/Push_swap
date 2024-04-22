@@ -6,7 +6,7 @@
 #    By: mmata-al <mmata-al@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 12:18:35 by mmata-al          #+#    #+#              #
-#    Updated: 2024/04/16 19:52:43 by mmata-al         ###   ########.fr        #
+#    Updated: 2024/04/22 16:07:57 by mmata-al         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ COMMANDS	=	$(SRC_DIR)commands/push.c \
 						$(SRC_DIR)commands/sort_stks.c \
 						$(SRC_DIR)commands/sort_3.c \
 						$(SRC_DIR)commands/swap.c \
+						$(SRC_DIR)commands/move_b_to_a.c \
 						
 SRCS = $(PUSHSWAP) $(COMMANDS) 
 OBJ = $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))

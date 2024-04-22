@@ -6,7 +6,7 @@
 /*   By: mmata-al <mmata-al@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:17:20 by mmata-al          #+#    #+#             */
-/*   Updated: 2024/04/10 13:53:54 by mmata-al         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:17:53 by mmata-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	rotate(t_stack_node **stack)
 	(*stack)->prev = NULL;
 	last_node->next->prev = last_node;
 	last_node->next->next = NULL;
-}		
+}
 
 void	ra(t_stack_node **a, bool print)
 {

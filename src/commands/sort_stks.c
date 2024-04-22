@@ -6,7 +6,7 @@
 /*   By: mmata-al <mmata-al@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:17:32 by mmata-al          #+#    #+#             */
-/*   Updated: 2024/04/16 19:11:50 by mmata-al         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:03:07 by mmata-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,11 @@ static void	move_a_to_b(t_stack_node **a, t_stack_node **b)
 	pb(b, a, false);
 }
 
-static void	move_b_to_a(t_stack_node **a, t_stack_node **b) 
+/* static void	move_b_to_a(t_stack_node **a, t_stack_node **b)
 {
 	push_prep(a, (*b)->target_node, 'a');
 	pa(a, b, false); 
-}
+} */
 
 static void	min_on_top(t_stack_node **a)
 {

@@ -52,7 +52,8 @@ t_stack_node	*find_max(t_stack_node *stack);
 //sorts
 void			sort_3(t_stack_node **a);
 void			sort_stks(t_stack_node **a, t_stack_node **b);
-void		swap(t_stack_node **head);
+void			swap(t_stack_node **head);
+void			move_b_to_a(t_stack_node **a, t_stack_node **b);
 
 //commands
 void			sa(t_stack_node **a, bool print);
