@@ -6,7 +6,7 @@
 /*   By: mmata-al <mmata-al@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:18:20 by mmata-al          #+#    #+#             */
-/*   Updated: 2024/04/22 16:26:02 by mmata-al         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:44:50 by mmata-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ static void	append_node(t_stack_node **stack, int n)
 		last_node->next = node;
 		node->prev = last_node;
 	}
+	node->cheapest = false;
 }
 
 void	init_stack_a(t_stack_node **a, char **argv)
