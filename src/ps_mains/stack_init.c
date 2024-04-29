@@ -6,7 +6,7 @@
 /*   By: mmata-al <mmata-al@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:18:20 by mmata-al          #+#    #+#             */
-/*   Updated: 2024/04/24 18:44:50 by mmata-al         ###   ########.fr       */
+/*   Updated: 2024/04/29 18:00:26 by mmata-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,15 +68,16 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	while (argv[i])
 	{
 		if (error_syntax(argv[i]))
-			free_errors(a);
+			return (free_final(argv), free_errors(a));
 		n = ft_atol(argv[i]);
 		if (n > INT_MAX || n < INT_MIN)
-			free_errors(a);
+			return (free_final(argv), free_errors(a));
 		if (error_duplicate(*a, (int)n))
-			free_errors(a);
+			return (free_final(argv), free_errors(a));
 		append_node(a, (int)n);
 		i++;
 	}
+	free_final(argv);
 }
 
 t_stack_node	*get_cheapest(t_stack_node *stack)

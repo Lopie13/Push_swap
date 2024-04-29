@@ -6,7 +6,7 @@
 #    By: mmata-al <mmata-al@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/09 17:32:29 by mmata-al          #+#    #+#              #
-#    Updated: 2024/04/16 19:49:46 by mmata-al         ###   ########.fr        #
+#    Updated: 2024/04/29 17:31:05 by mmata-al         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BSOURCES:.c=.o)
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -fPIC
+CFLAGS = -Wall -Wextra -Werror -fPIC -g
 
 all: $(NAME)
 

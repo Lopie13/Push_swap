@@ -6,7 +6,7 @@
 #    By: mmata-al <mmata-al@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 12:18:35 by mmata-al          #+#    #+#              #
-#    Updated: 2024/04/22 16:07:57 by mmata-al         ###   ########.fr        #
+#    Updated: 2024/04/29 17:29:50 by mmata-al         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ SRCS = $(PUSHSWAP) $(COMMANDS)
 OBJ = $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))
 
 CC = cc
-CFLAGS = -Wall -Werror -Wextra -I$(LIBFT) -I$(SRC_DIR)
+CFLAGS = -Wall -Werror -Wextra -I$(LIBFT) -I$(SRC_DIR) -g
 RM = rm -f
 
 start:				

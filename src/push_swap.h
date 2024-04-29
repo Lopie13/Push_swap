@@ -73,5 +73,6 @@ int				error_syntax(char *str_n);
 int				error_duplicate(t_stack_node *a, int n);
 void			free_stack(t_stack_node **stack);
 void			free_errors(t_stack_node **a);
+void			free_final(char  **argv);
 
 #endif
